@@ -4,10 +4,11 @@ import pandas as pd
 def 정제(df):
     df = df.copy()  
     print("시작        ", len(df))
-    
+
     df = df.dropna(subset=["점수"])
     print("빈 칸 제거  ", len(df))
-    
+
+
     df = df.drop_duplicates()
     print("중복 제거   ", len(df))
     
